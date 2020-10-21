@@ -1,7 +1,7 @@
-package factory.idcard;
+package factorymethod.idcard;
 
-import factory.framework.Factory;
-import factory.framework.Product;
+import factorymethod.framework.Factory;
+import factorymethod.framework.Product;
 
 import java.util.ArrayList;
 import java.util.List;
