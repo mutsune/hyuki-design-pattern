@@ -26,7 +26,7 @@ public class UndefinePen implements Product {
         Product p = null;
         try {
             p = (Product) clone();
-        } catch (CloneNotSupportedException e) {
+        } catch (CloneNotSupportedException e) { // Cloneable を実装していないと例外が発生する
             e.printStackTrace();
         }
         return p;
