@@ -11,21 +11,26 @@ public class Main {
         UndefinePen upen = new UndefinePen('~');
         MessageBox mbox = new MessageBox('*');
         MessageBox sbox = new MessageBox('/');
-        manager.register("strong message", upen);
-        manager.register("warning box", mbox);
-        manager.register("slash box", sbox);
+        String upenName = "strong message";
+        manager.register(upenName, upen);
+        String mboxName = "warning box";
+        manager.register(mboxName, mbox);
+        String sboxName = "slash box";
+        manager.register(sboxName, sbox);
 
         // 生成
-        Product p1 = manager.create("strong message");
-        p1.use("Hello, world.");
+        String message = "Hello, world.";
+
+        Product p1 = manager.create(upenName);
+        p1.use(message);
         System.out.println("");
 
-        Product p2 = manager.create("warning box");
-        p2.use("Hello, world.");
+        Product p2 = manager.create(mboxName);
+        p2.use(message);
         System.out.println("");
 
-        Product p3 = manager.create("slash box");
-        p3.use("Hello, world.");
+        Product p3 = manager.create(sboxName);
+        p3.use(message);
         System.out.println("");
     }
 
