@@ -1,5 +1,7 @@
 package prototype;
 
+import prototype.framework.Product;
+
 public class UndefinePen implements Product {
 
     private char ulChar;

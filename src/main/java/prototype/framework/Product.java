@@ -1,4 +1,4 @@
-package prototype;
+package prototype.framework;
 
 public interface Product extends Cloneable {
 

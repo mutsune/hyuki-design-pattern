@@ -1,4 +1,4 @@
-package prototype;
+package prototype.framework;
 
 import java.util.HashMap;
 

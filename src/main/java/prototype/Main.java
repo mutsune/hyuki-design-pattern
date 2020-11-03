@@ -1,5 +1,8 @@
 package prototype;
 
+import prototype.framework.Manager;
+import prototype.framework.Product;
+
 public class Main {
 
     public static void main(String[] args) {

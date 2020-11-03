@@ -1,5 +1,7 @@
 package prototype;
 
+import prototype.framework.Product;
+
 public class MessageBox implements Product {
 
     private char decoChar;
