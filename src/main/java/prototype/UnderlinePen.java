@@ -2,12 +2,12 @@ package prototype;
 
 import prototype.framework.Product;
 
-public class UndefinePen implements Product {
+public class UnderlinePen implements Product {
 
-    private char ulChar;
+    private char underlineChar;
 
-    public UndefinePen(char ulChar) {
-        this.ulChar = ulChar;
+    public UnderlinePen(char underlineChar) {
+        this.underlineChar = underlineChar;
     }
 
     @Override
@@ -16,7 +16,7 @@ public class UndefinePen implements Product {
         System.out.println("\"" + s + "\"");
         System.out.print(" ");
         for (int i = 0; i < length; i++) {
-            System.out.print(ulChar);
+            System.out.print(underlineChar);
         }
         System.out.println("");
     }

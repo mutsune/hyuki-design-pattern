@@ -8,7 +8,7 @@ public class Main {
     public static void main(String[] args) {
         // 準備
         Manager manager = new Manager();
-        UndefinePen upen = new UndefinePen('~');
+        UnderlinePen upen = new UnderlinePen('~');
         MessageBox mbox = new MessageBox('*');
         MessageBox sbox = new MessageBox('/');
         String upenName = "strong message";
