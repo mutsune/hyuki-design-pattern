@@ -12,12 +12,12 @@ public class Main {
             root2.add(new File("diary.html", 1000));
             root2.add(new File("index.html", 2000));
 
-            ElementArrayList list = new ElementArrayList();
-            list.add(root1);
-            list.add(root2);
-            list.add(new File("etc.html", 1234));
-
-            list.accept(new ListVisitor());
+//            ElementArrayList list = new ElementArrayList();
+//            list.add(root1);
+//            list.add(root2);
+//            list.add(new File("etc.html", 1234));
+//
+//            list.accept(new ListVisitor());
         } catch (FileTreatmentException e) {
             e.printStackTrace();
         }
