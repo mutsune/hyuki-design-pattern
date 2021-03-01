@@ -1,14 +1,13 @@
 package interpreter.ex2301.interpreter;
 
 import interpreter.ex2301.executor.Executor;
-import interpreter.ex2301.executor.ExecutorFactory;
 
 import java.util.Arrays;
 
 /**
  * <primitive command> ::= go | right | left
  */
-public class PrimitiveCommandNode extends Node {
+public class PrimitiveCommandNode implements Node {
 
     private PrimitiveCommand command;
     private Executor executor;
@@ -37,7 +36,7 @@ public class PrimitiveCommandNode extends Node {
     }
 
     @Override
-    public void execute() {
+    public void eval() {
         executor.execute();
     }
 

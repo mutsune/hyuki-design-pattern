@@ -1,9 +1,9 @@
 package interpreter.ex2301.interpreter;
 
-import interpreter.ex2301.executor.Executable;
+public interface Node {
 
-public abstract class Node implements Executable {
+    void parse(Context context) throws ParseException;
 
-    public abstract void parse(Context context) throws ParseException;
+    void eval();
 
 }

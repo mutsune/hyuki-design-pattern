@@ -1,13 +1,11 @@
 package interpreter.ex2301.interpreter;
 
-import interpreter.ex2301.executor.Executable;
-
 import java.util.ArrayList;
 
 /**
  * <command list> ::= <command>* end
  */
-public class CommandListNode extends Node {
+public class CommandListNode implements Node {
 
     private final ArrayList<Node> list = new ArrayList<>();
 
@@ -33,8 +31,8 @@ public class CommandListNode extends Node {
     }
 
     @Override
-    public void execute() {
-        list.forEach(Executable::execute);
+    public void eval() {
+        list.forEach(Node::eval);
     }
 
 }

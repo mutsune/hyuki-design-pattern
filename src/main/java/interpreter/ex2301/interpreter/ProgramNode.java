@@ -3,7 +3,7 @@ package interpreter.ex2301.interpreter;
 /**
  * <program> ::= program <command list>
  */
-public class ProgramNode extends Node {
+public class ProgramNode implements Node {
 
     private Node commandListNode;
 
@@ -20,8 +20,8 @@ public class ProgramNode extends Node {
     }
 
     @Override
-    public void execute() {
-        commandListNode.execute();
+    public void eval() {
+        commandListNode.eval();
     }
 
 }

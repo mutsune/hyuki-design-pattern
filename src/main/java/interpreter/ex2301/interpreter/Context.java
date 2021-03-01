@@ -1,7 +1,5 @@
 package interpreter.ex2301.interpreter;
 
-import interpreter.ex2301.executor.ExecutorFactory;
-
 import java.util.StringTokenizer;
 
 public class Context {

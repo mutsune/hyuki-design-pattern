@@ -1,17 +1,17 @@
 package interpreter.ex2301.canvas.executor;
 
 import interpreter.ex2301.canvas.CarCanvas;
-import interpreter.ex2301.canvas.car.CarPosition;
-import interpreter.ex2301.canvas.car.Direction;
+import interpreter.ex2301.car.CarPosition;
+import interpreter.ex2301.car.Direction;
 import interpreter.ex2301.executor.Executor;
 
 import java.awt.*;
 
-public class GoCarOperation implements Executor {
+public class GoCarExecutor implements Executor {
 
     private final CarCanvas carCanvas;
 
-    public GoCarOperation(CarCanvas carCanvas) {
+    public GoCarExecutor(CarCanvas carCanvas) {
         this.carCanvas = carCanvas;
     }
 

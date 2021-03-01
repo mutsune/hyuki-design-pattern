@@ -3,14 +3,10 @@ package interpreter.ex2301.interpreter;
 /**
  * <repeat command> ::= repeat <number> <command list>
  */
-public class RepeatCommandNode extends Node {
+public class RepeatCommandNode implements Node {
 
     private int number;
     private Node commandListNode;
-
-    public int getNumber() {
-        return number;
-    }
 
     @Override
     public void parse(Context context) throws ParseException {
@@ -27,8 +23,10 @@ public class RepeatCommandNode extends Node {
     }
 
     @Override
-    public void execute() {
-        commandListNode.execute();
+    public void eval() {
+        for (int i = 0; i < number; i++) {
+            commandListNode.eval();
+        }
     }
 
 }

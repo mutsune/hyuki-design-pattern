@@ -1,6 +1,6 @@
 package interpreter.ex2301.canvas;
 
-import interpreter.ex2301.canvas.car.CarPosition;
+import interpreter.ex2301.car.CarPosition;
 
 import javax.imageio.ImageIO;
 import java.awt.*;
@@ -34,9 +34,11 @@ public class CarCanvas extends Canvas {
     public void paint(Graphics g) {
         Graphics2D g2 = (Graphics2D) g;
 
+        // set position and rotate image
         AffineTransform transform = AffineTransform.getTranslateInstance(position.getX(), position.getY());
         double radian = Math.toRadians(position.getDirection().getAngle());
         transform.rotate(radian, CAR_IMAGE_SIZE / 2., CAR_IMAGE_SIZE / 2.);
+
         g2.drawImage(carImage, transform, null);
     }
 

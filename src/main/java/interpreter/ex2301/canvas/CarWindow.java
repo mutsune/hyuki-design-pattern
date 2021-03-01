@@ -1,10 +1,7 @@
 package interpreter.ex2301.canvas;
 
-import interpreter.ex2301.canvas.executor.CarOperationFactory;
-import interpreter.ex2301.interpreter.Context;
-import interpreter.ex2301.interpreter.Node;
-import interpreter.ex2301.interpreter.ParseException;
-import interpreter.ex2301.interpreter.ProgramNode;
+import interpreter.ex2301.canvas.executor.CarExecutorFactory;
+import interpreter.ex2301.interpreter.facade.Evaluator;
 
 import javax.swing.*;
 import java.awt.event.ActionEvent;
@@ -44,28 +41,9 @@ public class CarWindow extends JFrame implements ActionListener {
 
     @Override
     public void actionPerformed(ActionEvent e) {
-        String programText = getProgramText();
-        Node node = parse(programText);
-        node.execute();
-    }
-
-    private Node parse(String programText) {
-        Node node = new ProgramNode();
-        CarOperationFactory carOperationFactory = new CarOperationFactory(canvas);
-        try {
-            Context context = new Context(programText, carOperationFactory);
-            node.parse(context);
-        } catch (ParseException exception) {
-            exception.printStackTrace();
-        }
-        System.out.println("node = " + node);
-        return node;
-    }
-
-    private String getProgramText() {
-        String command = commandTextField.getText();
-        System.out.println("text = \"" + command + "\"");
-        return command;
+        String programText = commandTextField.getText();
+        System.out.println("text = \"" + programText + "\"");
+        Evaluator.run(programText, new CarExecutorFactory(canvas));
     }
 
 }

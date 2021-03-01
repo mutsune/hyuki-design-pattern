@@ -1,4 +1,4 @@
-package interpreter.ex2301.canvas.car;
+package interpreter.ex2301.car;
 
 import java.awt.*;
 
